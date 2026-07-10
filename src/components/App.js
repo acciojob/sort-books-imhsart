@@ -35,20 +35,27 @@ const App = () => {
   return (
     <div className="container">
       <h1>Books List</h1>
+
       <form onSubmit={handleSubmit}>
-        <label htmlFor="sort-by">Sort By:</label>
-        <select id="sort-by" value={category} onChange={e=> setCategory(e.target.value)}>
-          <option value='title'>Title</option>
-          <option value='author'>Author</option>
-          <option value='publisher'>Publisher</option>
-        </select>
-        <label htmlFor="order">Order:</label>
-        <select id="order" onChange={e => setOrder(e.target.value)} value={order}>
-          <option value='asc'>Asc</option>
-          <option value='desc'>Desc</option>
-        </select>
+        <div>
+          <label htmlFor="sort-by">Sort by:</label>
+          <select id="sort-by" value={category} onChange={e => setCategory(e.target.value)}>
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="publisher">Publisher</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="order">Order:</label>
+          <select id="order" value={order} onChange={e => setOrder(e.target.value)}>
+            <option value="asc">Asc</option>
+            <option value="desc">Desc</option>
+          </select>
+        </div>
         <button type="submit">Sort Books</button>
       </form>
+
         <table>
           <thead>
             <tr>

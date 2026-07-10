@@ -36,15 +36,17 @@ const App = () => {
     <div className="container">
       <h1>Books List</h1>
       <form onSubmit={handleSubmit}>
-        <label>sort by<select value={category} onChange={e=> setCategory(e.target.value)}>
+        <label htmlFor="sort-by">sort by</label>
+        <select id="sort-by" value={category} onChange={e=> setCategory(e.target.value)}>
           <option value='title'>Title</option>
           <option value='author'>Author</option>
           <option value='publisher'>Publisher</option>
-        </select></label>
-        <label>order<select onChange={e => setOrder(e.target.value)} value={order}>
+        </select>
+        <label htmlFor="order">order</label>
+        <select id="order" onChange={e => setOrder(e.target.value)} value={order}>
           <option value='asc'>Asc</option>
           <option value='desc'>Desc</option>
-        </select></label>
+        </select>
         <button type="submit">Sort Books</button>
       </form>
         <table>

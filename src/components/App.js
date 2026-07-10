@@ -34,23 +34,23 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Books Table</h1>
+      <h1>Books List</h1>
       <form onSubmit={handleSubmit}>
-        <select value={category} onChange={e=> setCategory(e.target.value)}>
+        <label>sort by<select value={category} onChange={e=> setCategory(e.target.value)}>
           <option value='title'>Title</option>
           <option value='author'>Author</option>
           <option value='publisher'>Publisher</option>
-        </select>
-        <select onChange={e => setOrder(e.target.value)} value={order}>
+        </select></label>
+        <label>order<select onChange={e => setOrder(e.target.value)} value={order}>
           <option value='asc'>Asc</option>
           <option value='desc'>Desc</option>
-        </select>
+        </select></label>
         <button type="submit">Sort Books</button>
       </form>
         <table>
           <thead>
             <tr>
-              <th>Book Title</th>
+              <th>Title</th>
               <th>Author</th>
               <th>Publisher</th>
               <th>ISBN</th>

@@ -49,8 +49,8 @@ const App = () => {
         <div>
           <label htmlFor="order">Order:</label>
           <select id="order" value={order} onChange={e => setOrder(e.target.value)}>
-            <option value="asc">Asc</option>
-            <option value="desc">Desc</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
           </select>
         </div>
         <button type="submit">Sort Books</button>

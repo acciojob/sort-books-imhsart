@@ -12,7 +12,6 @@ const App = () => {
 
   useEffect(() => {
     getData()
-    dispatch(sort('title', 'asc'))
   }, [])
 
 

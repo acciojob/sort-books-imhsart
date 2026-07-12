@@ -21,6 +21,7 @@ const App = () => {
       try{
         const response = await axios.get(`https://api.nytimes.com/svc/books/v3/lists/2025-05-04/hardcover-fiction?api-key=${apikey}`)
         dispatch(success(response.data.results.books))
+        dispatch(sort('title', 'asc'))
       }catch(error){
         dispatch(failure(error))
       }

@@ -15,9 +15,9 @@ const App = () => {
   }, [])
   useEffect(() => {
     if (bookData.length) {
-      dispatch(sort("title", "asc"));
+      dispatch(sort("title", "desc"));
     }
-  }, []);
+  }, [bookData.length]);
 
 
   async function getData(){

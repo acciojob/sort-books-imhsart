@@ -17,7 +17,7 @@ const App = () => {
     if (bookData.length) {
       dispatch(sort("title", "asc"));
     }
-  }, [bookData.length]);
+  }, []);
 
 
   async function getData(){

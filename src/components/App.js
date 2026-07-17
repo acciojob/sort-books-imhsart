@@ -13,11 +13,12 @@ const App = () => {
   useEffect(() => {
     getData()
   }, [])
-  useEffect(() => {
-    if (bookData.length) {
-      dispatch(sort("title", "desc"));
-    }
-  }, [bookData.length]);
+
+  // useEffect(() => {
+  //   if (bookData.length) {
+  //     dispatch(sort("title", "desc"));
+  //   }
+  // }, [bookData.length]);
 
 
   async function getData(){
